@@ -11,12 +11,14 @@ void setup()
 void drawing()
 {
   // Clear Background to whithe
-  background(255);
+  background(0, random(200)+50, 0);
   // Choose a Number of Circles
   int z = int(random(30)+6);
   // Iterrate about the needed Circles
   for(int n = 0; n < z; n++)
   {
+    stroke(110, 110, 50);
+    strokeWeight(random(36));
     // Set a nice bluly Color
     fill(random(50), random(50), random(255), random(255));
     // Draw the Circle
