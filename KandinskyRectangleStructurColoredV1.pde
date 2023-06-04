@@ -19,7 +19,7 @@ class Rectangle{
     dx = width / d;
     dy = height / d;
     // Declare inner Sequers
-    dd = random( min(height, width)*0.7);
+    dd = random( min(height, width)*0.7)/d;
   }
   
   // Method to Paint the Figure of Rectangle
