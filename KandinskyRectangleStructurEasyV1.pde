@@ -20,7 +20,7 @@ class Rectangle{
     dx = width / d;
     dy = height / d;
     // Choose a Size for the drawn Cell
-    dd = random( min(height, width)*0.7);
+    dd = random( min(height, width)*0.7)/d;
   }
   
   // Method to drawn a Cell at the given Position in the Structure
