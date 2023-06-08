@@ -42,26 +42,28 @@ class Rectangle{
   // Method to Paint the Figure of Rectangle
   void paintFigure(float x, float y)
   {
-    // Calculate Coordinate of the Cell
-    float xm = (x+0.5)*dx;
-    float ym = (y+0.5)*dy;
     
-    // Test is Cell in inner Triangle
-    if(isInCircle(xm, ym))
-    {
-      fill(33);
-    }
-    else
-    {
-      fill(233);
-    }
+    // Calculate the Corner Edge of the drawn Cell
+    float xc = ((x+0.5)*dx);
+    float yc = ((y+0.5)*dy);
+    // Draw the Cell Figure
     
-    // Calcuate the Coorner Edges for the Cell
-    float xc = xm-(dd/2);
-    float yc = ym-(dd/2);
-   
-    // Draws the Rectangle
-    rect(xc, yc, dd, dd);
+    float x1 = xc;
+    float y1 = yc - (dd/2);
+    
+    float x2 = xc - (dd/2);
+    float y2 = yc + (dd/2);
+    
+    float x3 = xc + (dd/2);
+    float y3 = yc + (dd/2);
+    
+    // Chose a Color for the Triangle
+    if(isInCircle(xc, yc))
+      { fill(200);}
+      else
+      { fill(88);}
+    
+    triangle(x1, y1, x2, y2, x3, y3);
   }
 }
 
